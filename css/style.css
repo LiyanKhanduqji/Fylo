@@ -1,0 +1,335 @@
+/* Variables */
+:root{
+    --dark-blue: hsl(243, 87%, 12%);
+    --Desaturated-blue: hsl(238, 22%, 44%);
+    --Bright-Blue: hsl(224, 93%, 58%);
+    --Moderate-Cyan: hsl(170, 45%, 43%);
+    --Light-Grayish-Blue: hsl(240, 75%, 98%);
+    --Light-Gray: hsl(0, 0%, 75%);
+
+    --section-margin: 80px;
+    --section-padding: 30px;
+}
+/* Start Global Styling */
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+h1{
+    font-family: 'Raleway', sans-serif;
+    font-size: 25px;
+}
+p{
+    margin-bottom: 25px;
+}
+body{
+font-family: 'Open Sans', sans-serif;
+font-weight: 400;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+/* End Global Styling */
+/* Start Heading */
+header{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+.container{
+    width: 90%;
+    margin: auto;
+    padding-top: 50px;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+}
+header .container .logo{
+    width: 100px;
+}
+header .container .logo img{
+    width: 100%;
+}
+header .container nav ul{
+    display: flex;
+    flex-direction: row;
+}
+header .container nav ul li{
+    margin-left:25px;
+    transition: 0.4s;
+}
+header .container nav ul a{
+    color: black;
+}
+header .container nav ul li:hover{
+    margin-top: 5px;
+    color: var(--Desaturated-blue);
+}
+/* End Heading */
+
+/* Start Get Started */
+.get-started{
+    padding-top: var(--section-padding);
+}
+.get-started .container{
+    display: grid;
+    grid-template-columns: 40% 40%;
+    justify-content: space-between;
+}
+.text{
+    grid-column-start: 1;
+    grid-row-start: 1;
+}
+.image{
+    grid-column-start: 2;
+}
+.get-started .container .text .form-container{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.get-started .container .text input{
+    font-size: 12px;
+    padding: 10px;
+    width: 299px;
+    color: #777;
+    border-radius: 3px;
+    border: 1px solid var(--dark-blue);
+}
+.button{
+    text-align: center;
+    background-color: var(--Bright-Blue);
+    border-radius: 3px;
+    padding: 10px 30px;
+}
+.get-started .container .text .button a{
+    color:  var(--Light-Grayish-Blue);
+    font-size: 12px;
+    font-weight: 600;
+}
+@media (min-width:375px) and (max-width: 1100px) {
+    .get-started .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .get-started .container .text{
+        text-align: center;
+    }
+    .get-started .container .text .form-container{
+       display: inline-block;
+       width: 100%;
+    }
+    .get-started .container .text input{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+.container img{
+    width: 100%;
+}
+/* Start Floy Work */
+.floy-work{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-margin);
+    margin-top: var(--section-margin);
+    background-color: #777;
+    position: relative;
+    background-color: #f8f8fe;
+}
+.floy-work .top{
+    margin-top: var(--section-padding);
+    position: relative;
+    top: -130px;
+    max-width: 100%;
+}
+.top img{
+    max-width: 100%;
+}
+.floy-work .container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(500px, 1fr) ) ;
+    justify-content: space-between;
+    gap: 185px;
+}
+@media (min-width:376px) and (max-width: 1100px) {
+    .floy-work .container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .top img{
+        position: relative;
+        bottom:-50px;
+    }
+}
+.floy-work .text {
+    max-width: 100%;
+}
+.floy-work .text h1{
+    font-size: 27px;
+}
+.floy-work a{
+    color: var(--Moderate-Cyan);
+    position: relative;
+    margin-bottom: 30px;
+    transition: 0.3s;
+}
+.floy-work a::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background-color: var(--Moderate-Cyan);
+    left: 0;
+    bottom: -4px;
+}
+.floy-work a i{
+    transition: 0.3s;
+}
+.floy-work a:hover i{
+    padding-left: 10px;
+}
+.quote-box{
+    margin-top: var(--section-margin);
+    padding: var(--section-padding);
+    background-color: white;
+    width: 350px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+    transition: .4s ease-in;
+}
+@media (min-width: 1440px) {
+    .quote-box:hover{
+        background-color: #8889ad;
+        color: white;
+        margin-left: 40px;
+    }
+}
+.quote-box p{
+    font-size: 12px;
+    position: relative;
+    line-height: 1.8;
+}
+.quote-box p:nth-child(1):before{
+    content: '\f10d';
+    font-family: 'FontAwesome';
+    position: absolute;
+    top: -18px;
+}
+.avatar{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.avatar img{
+    border-radius: 50%;
+    width: 40px;
+}
+.avatar h3, h2{
+    font-size: 10px;
+}
+.avatar h3:nth-of-type(1){
+    font-weight: normal;
+}
+/* Start Access Section */
+.access{
+    padding-top: var(--section-padding);
+    padding-bottom: var(--section-padding);
+    background-color: var(--Desaturated-blue);
+}
+.access .container {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 40px;
+    justify-content: space-between;
+    line-height: 1.6;
+}
+.access .container .text {
+    color: var(--Light-Grayish-Blue);
+    padding: var(--section-padding);
+}
+.access .container .form-container{
+    padding: var(--section-padding);
+}
+.access .container .form-container input{
+    width: 100%;
+    height: 40px;
+    font-size: 12px;
+    padding: 10px;
+    color: #777;
+    margin-bottom: 30px;
+}
+.access .container .form-container .button{
+    width: 50%;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+}
+@media (min-width:376px) and (max-width: 1100px) {
+    .access .container{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .access .container h1{
+        font-size: 18px;
+    }
+    .access .container .form-container .button{
+        width: 100%;
+    }
+}
+.access .container .form-container .button a{
+    color: var(--Light-Grayish-Blue);
+    font-size: 12px;
+}
+/* Start Footer */
+footer{
+    padding-top: var(--section-padding);
+    background-color: var(--dark-blue);
+    color: white;
+}
+footer .container img:nth-child(1){
+    width: 130px;
+}
+.section-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr) ) ;
+    gap: 30px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.section-container li{
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+.section-container .contact li img{
+    width: 12px;
+    margin-right: 10px;
+}
+.section-container {
+    line-height: 2;
+}
+.section-container .social-icons{
+    display: flex;
+    justify-content: center;
+}
+.section-container .social-icons .icon{
+    border: 1px solid var(--Light-Grayish-Blue);
+    width: fit-content;
+    height: fit-content;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+.section-container .social-icons i{
+    color: var(--Light-Grayish-Blue);
+    font-weight: 100;
+    font-size: 12px;
+    padding: 5px 10px;
+}
+/* End Footer */
